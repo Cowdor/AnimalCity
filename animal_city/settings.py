@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS = ['D:/USUARIO/Documents/Coope/2023-1/Creación de Bases/Animal City/myapp/templates/static']
+STATICFILES_DIRS = ['D:/USUARIO/Documents/Coope/2023-1/Creación de Bases/Animal City/AnimalCity/myapp/templates/static']
 
 # Application definition
 
