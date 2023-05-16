@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo Página Web-->
+    <title>Registro Productos</title>
+
+    <!-- Favicon Pagina Web -->
+    <link rel="icon" type="image/png" href="static/assets/favicon.png">
+
+    <!-- Agregamos los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('#tabla_vis').DataTable();
+});
+</script>
+
+    
+    
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Animación Inicio-->
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      body {
+        animation: fade-in 2s;
+      }
+    </style>
+
+  </head>
+
+    <body class="cuerpo-productos">
+
+        <!-- Creamos la navbar -->
+        <nav class="navbar navbar-expand-lg bg-dark" style="max-height:200px;">
+
+            <img class="logo-navbar" src="static/assets/favicon.png" alt="Logo Animal City" style="width: 2.5%; margin-right: 10px;">
+            <a class="navbar-brand" href="menu" style="color: white; font-size: x-large; font-weight: bold; font-family: 'Poppins', sans-serif;">Animal City:</a>
+            <a class="navbar-brand" href="menu" style="color: white; font-size: x-large; font-family: 'Poppins', sans-serif;">Sistema de Gestión</a>
+
+            <div class="collapse navbar-collapse" id="navbarNav" style="align-content: center;">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="menu" style="color: white; font-family: 'Poppins', sans-serif;">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white; font-family: 'Poppins', sans-serif;">Acerca de</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"  style="color: white; font-family: 'Poppins', sans-serif;">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- Fin Navbar-->
+
+
+        <div class="container-registro" style="max-width: 600px; margin-top:100px;">
+            <div class="card" style="margin-top: 10px;">
+                <div class="card-body">
+
+                    <h5 class="card-title" style="font-weight:bold; font-family: 'Poppins', sans-serif; font-size:25px; text-align:center; margin-bottom:30px;">Consulta de Productos</h5>
+
+                    <div class="mytable">
+
+                        <table id="tabla_vis" class="display">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Descripcion</th>
+                                    <th>Precio</th>
+                                    <th>Stock</th>
+                                    <th>Fecha Vencimiento</th>
+                                    <th>tipo</th>
+                                    <th>acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {%for producto in productos%}
+
+                                <tr>
+                                    
+                                    <td>{{producto.id_producto}}</td>
+                                    <td>{{producto.nombre_pro}}</td>
+                                    <td>{{producto.descripcion}}</td>
+                                    <td>{{producto.precio}}</td>
+                                    <td>{{producto.stock}}</td>
+                                    <td>{{producto.fecha_v}}</td>
+                                    <td>{{producto.tipo_pro}}</td>
+                                    <td> <button class="btn btn-primary">
+                                        ver producto
+
+                                    </button></td>
+                                    
+                                    
+                                </tr>
+
+                                {%endfor%}
+                            
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+
+                    
+
+
+                  
+
+
+                </div>
+            </div>
+        </div>
+
+
+        

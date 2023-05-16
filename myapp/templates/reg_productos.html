@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo Página Web-->
+    <title>Registro Productos</title>
+
+    <!-- Favicon Pagina Web -->
+    <link rel="icon" type="image/png" href="static/assets/favicon.png">
+
+    <!-- Agregamos los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Animación Inicio-->
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      body {
+        animation: fade-in 2s;
+      }
+    </style>
+
+  </head>
+
+    <body class="cuerpo-productos">
+
+        <!-- Creamos la navbar -->
+        <nav class="navbar navbar-expand-lg bg-dark" style="max-height:200px;">
+
+            <img class="logo-navbar" src="static/assets/favicon.png" alt="Logo Animal City" style="width: 2.5%; margin-right: 10px;">
+            <a class="navbar-brand" href="menu" style="color: white; font-size: x-large; font-weight: bold; font-family: 'Poppins', sans-serif;">Animal City:</a>
+            <a class="navbar-brand" href="menu" style="color: white; font-size: x-large; font-family: 'Poppins', sans-serif;">Sistema de Gestión</a>
+
+            <div class="collapse navbar-collapse" id="navbarNav" style="align-content: center;">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="menu" style="color: white; font-family: 'Poppins', sans-serif;">Inicio</a>
+                    </li>
+
+                    <li class="nav-item"">
+                    <a class="nav-link" href="#" style="color: white; font-family: 'Poppins', sans-serif;">Acerca de</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"  style="color: white; font-family: 'Poppins', sans-serif;">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- Fin Navbar-->
+
+
+        <div class="container-registro" style="max-width: 600px; margin-top:100px;">
+            <div class="card" style="margin-top: 10px;">
+                <div class="card-body">
+
+                    <h5 class="card-title" style="font-weight:bold; font-family: 'Poppins', sans-serif; font-size:25px; text-align:center; margin-bottom:30px;">Registro de Productos</h5>
+
+
+                    <form method="POST">
+                    {%csrf_token%}
+                    <div class="form-row" >
+                    {{Productos}}
+                    </div>
+
+                    <div class="form-group text-center" style="margin-top: 20px; margin-bottom: 0px">
+                        <button type="submit" class="btn btn-success btn-md" style="font-family: 'Poppins',sans-serif;">Registrar Producto</button>
+                    </div>
+                    </form>
+            
+
+                    <!-- <form>
+
+
+                        <div class="form-row" style="margin-bottom: 10px;">
+
+                            <div class="col-md-6">
+                                <label for="nombre-producto" style="font-size:small; font-family: 'Poppins', sans-serif;">Nombre del Producto*</label>
+                                <input type="text" class="form-control form-control-sm" id="nombre-producto" placeholder="Nombre del producto" required>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label for="precio" style="font-size:small; font-family: 'Poppins', sans-serif;">Precio*</label>
+                                <input type="number" class="form-control form-control-sm" id="precio" placeholder="Precio del Producto" min="1000" required>
+                            </div>
+
+                        </div>
+                        
+
+                        <div class="form-row" style="margin-bottom: 10px;">
+
+                            <div class="col-md-12">
+                                <label for="descripcion" style="font-size:small; font-family: 'Poppins', sans-serif;">Descripcion*</label>
+                                <textarea class="form-control form-control-sm" id="descripcion" placeholder="Descripcion del Producto." maxlength="300" required></textarea>
+                            </div>
+                        
+                        </div>
+
+
+                        <div class="form-row" style="margin-bottom: 10px;">
+
+                            <div class="col-md-6">
+                                <label for="cantidad" style="font-size:small; font-family: 'Poppins', sans-serif;">Cantidad*</label>
+                                <input type="number" class="form-control form-control-sm" id="cantidad" placeholder="Cantidad de Producto" min="1" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="fecha-vencimiento" style="font-size:small; font-family: 'Poppins', sans-serif;">Fecha de vencimiento*</label>
+                                <input type="date" class="form-control form-control-sm" id="fecha-vencimiento" required>
+                            </div>
+                        
+                        </div>
+
+                        <div class="form-group text-center" style="margin-top: 20px; margin-bottom: 0px">
+                            <button type="submit" class="btn btn-success btn-md" style="font-family: 'Poppins',sans-serif;">Registrar Producto</button>
+                        </div>
+
+                    </form> -->
+
+
+                </div>
+            </div>
+        </div>
+
+
+        

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo Página Web-->
+    <title>Menú</title>
+
+    <!-- Favicon Pagina Web -->
+    <link rel="icon" type="image/png" href="static/assets/favicon.png">
+
+    <!-- Agregamos los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!--Animación Inicio-->
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      body {
+        animation: fade-in 2s;
+      }
+    </style>
+
+
+  </head>
+
+    <body class="cuerpo-menu">
+
+      <!-- Creamos la navbar -->
+      <nav class="navbar navbar-expand-lg bg-dark" style="max-height:200px;">
+
+          <img class="logo-navbar" src="static/assets/favicon.png" alt="Logo Animal City" style="width: 2.5%; margin-right: 10px;">
+          <a class="navbar-brand" href="#" style="color: white; font-size: x-large; font-weight: bold; font-family: 'Poppins', sans-serif;">Animal City:</a>
+          <a class="navbar-brand" href="#" style="color: white; font-size: x-large; font-family: 'Poppins', sans-serif;">Sistema de Gestión</a>
+
+
+          <div class="collapse navbar-collapse" id="navbarNav" style="align-content: center;">
+            
+            <ul class="navbar-nav ml-auto">
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white; font-family: 'Poppins', sans-serif;">Inicio</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white; font-family: 'Poppins', sans-serif;">Acerca de</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#"  style="color: white; font-family: 'Poppins', sans-serif;">Contacto</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+      </nav>
+      <!-- End of navbar -->
+
+
+      <!-- Div Container (Where content goes!) -->
+      <div class="container-menu" style="margin:20px; padding:10px; background-color:transparent;">
+
+        <div class="row" style="justify-content: center;">
+
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/HC.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Historias Clínicas</h5>
+              <a href="#" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/PD.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Productos</h5>
+              <a href="reg_productos" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/VT.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Funcionarios</h5>
+              <a href="reg_funcionarios" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/VN.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Ventas</h5>
+              <a href="#" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/RE.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Resumen</h5>
+              <a href="#" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/PC.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Pacientes</h5>
+              <a href="reg_mascota" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/CS.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Consultas</h5>
+              <a href="#" class="btn btn-info">Consultar</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 17rem; margin:10px">
+            <img class="card-img-top" src="static/assets/LO.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Desconexión</h5>
+              <a href="#" class="btn btn-danger">Cerrar Sesión</a>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+      <!--End of Row Container-->
+
+
+      <!-- Agregamos los enlaces a los archivos JavaScript de Bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    </body>
+
+  </html>

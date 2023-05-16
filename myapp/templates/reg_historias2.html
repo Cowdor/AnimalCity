@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titulo Página Web-->
+    <title>Animal City - Registro HC</title>
+
+    <!-- Favicon Pagina Web -->
+    <link rel="icon" type="image/png" href="static/assets/favicon.png">
+
+    <!-- Agregamos los enlaces a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <!--Hoja de Estilos CSS-->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!--Fuente de Google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+    <body class="cuerpo-menu">
+
+        <!-- Creamos la navbar -->
+        <nav class="navbar navbar-expand-lg bg-dark" style="max-height:200px;">
+
+            <img class="logo-navbar" src="static/assets/favicon.png" alt="Logo Animal City" style="width: 2.5%; margin-right: 10px;">
+            <a class="navbar-brand" href="#" style="color: white; font-size: x-large; font-weight: bold; font-family: 'Poppins', sans-serif;">Animal City:</a>
+            <a class="navbar-brand" href="#" style="color: white; font-size: x-large; font-family: 'Poppins', sans-serif;">Sistema de Gestión</a>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav" style="align-content: center;">
+              
+              <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white; font-family: 'Poppins', sans-serif;">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: white; font-family: 'Poppins', sans-serif;">Acerca de</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#"  style="color: white; font-family: 'Poppins', sans-serif;">Contacto</a>
+                </li>
+
+              </ul>
+
+            </div>
+
+        </nav>
+        <!-- End of navbar -->
+
+        <!-- Div Container (Where content goes!) -->
+<!--         <div class="container" style="margin-top: 20px;">
+
+          <div class="row d-flex justify-content-center">
+
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+  
+                        <h5 class="card-title" style="font-weight:bold; font-family: 'Poppins', sans-serif; font-size:25px; text-align:center">Crear Historia Clinica</h5>                      
+  
+                    </div>
+                </div>       
+            </div>
+ 
+        </div> -->
+
+        <div class="container" style="max-width: 800px;">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" style="font-weight:bold; font-family: 'Poppins', sans-serif; font-size:25px; text-align:center; margin-bottom:30px;">Registro de Historia Clinica</h5>
+                
+
+                <!-- <form method="post" >
+                  {%csrf_token%}
+                  <div class="row">
+                    
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label for="nombre" style="font-size:large; font-family: 'Poppins', sans-serif;">Nombre del animal*</label>
+                                <input type="text" class="form-control form-control-md" id="nombre" placeholder="Ingrese el nombre del animal" name="animal" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fecha-nacimiento" style="font-size:large; font-family: 'Poppins', sans-serif;">Fecha de nacimiento*</label>
+                                <input type="date" class="form-control form-control-md" id="fecha-nacimiento" placeholder="Ingrese la fecha de nacimiento del animal" name="fecha-nacimiento"  required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sexo" style="font-size:large; font-family: 'Poppins', sans-serif;">Sexo (M/F)*</label>
+                                <select class="form-control form-control-md" id="sexo " name="Sexo" required>
+                                  <option value="">Seleccione el sexo del animal</option>
+                                  <option value="M">M</option>
+                                  <option value="F">F</option>
+                                </select>
+                              </div>
+
+                            <div class="form-group">
+                                <label for="condicion-medica" style="font-size:large; font-family: 'Poppins', sans-serif;">Condición médica*</label>
+                                <textarea class="form-control form-control-md" id="condicion-medica" placeholder="Ingrese la condición médica del animal (máximo 300 caracteres)" maxlength="300" name="Cmedica" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="direccion" style="font-size:large; font-family: 'Poppins', sans-serif;">Dirección*</label>
+                                <input type="text" class="form-control form-control-md" id="direccion" placeholder="Ingrese la dirección del dueño" name = "direccion" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" style="font-size:large; font-family: 'Poppins', sans-serif;">Correo electrónico</label>
+                                <input type="email" class="form-control form-control-md" id="email" placeholder="Ingrese su correo electrónico" name = "direccion" required>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label for="raza" style="font-size:large; font-family: 'Poppins', sans-serif;">Raza*</label>
+                                <input type="text" class="form-control form-control-md" id="raza" placeholder="Ingrese la raza del animal" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="peso" style="font-size:large; font-family: 'Poppins', sans-serif;">Peso (entre 1-100 kg)*</label>
+                                <input type="number" class="form-control form-control-md" id="peso" placeholder="Ingrese el peso del animal" min="1" max="100" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="estado-salud" style="font-size:large; font-family: 'Poppins', sans-serif;">Estado de salud*</label>
+                                <textarea class="form-control form-control-md" id="estado-salud" placeholder="Ingrese el estado de salud del animal (máximo 150 caracteres)" maxlength="150" required></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nombre-dueno" style="font-size:large; font-family: 'Poppins', sans-serif;">Nombre del dueño*</label>
+                                <input type="text" class="form-control form-control-md" id="nombre-dueno" placeholder="Ingrese el nombre del dueño" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono" style="font-size:large; font-family: 'Poppins', sans-serif;">Teléfono</label>
+                                <input type="tel" class="form-control form-control-md" id="telefono" placeholder="Ingrese su número de teléfono (10 caracteres)" maxlength="10" pattern="[0-9]{10}" required>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Registrar Historia</button>
+                            </div>
+
+                        </div>
+                  
+                    </div>
+
+                </form> -->
+
+                <form method="post" action=""> 
+    
+                  {%csrf_token%}
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      {{Mascotaf}}
+                    </div>
+                    <div class="form-group">
+                      {{fpersona}}
+                    </div>
+                  </div>
+                 
+                  
+                  <button type="submit">enviar</button>
+
+                </form>
+              </div>
+            </div>
+          </div>
+          
+        <!--End of Row Container-->
+
+            <!-- Agregamos los enlaces a los archivos JavaScript de Bootstrap -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+            <!-- Agregamos el Footer-->
+            <footer>
+              Copyright © 2023 Angel Galvis & Mateo Vergara. All Rights Reserved
+            </footer>
+    </body>
+  </html>
